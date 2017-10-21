@@ -1,6 +1,7 @@
 To use InputGenerator.StopLight:
 
 from InputGenerator.StopLight import StopLight
+
 test_light = StopLight()
 test_light.fill()
 test_light.randomize()
