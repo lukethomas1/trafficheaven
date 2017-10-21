@@ -8,6 +8,22 @@ class DataInput:
         self.avg_wait = 0
         self.num_cars_waiting = 0
 
+    # update self.max_wait, self.avg_wait, self.num_cars_waiting based on
+    # currently waiting cars
+    def update(self, waiting_cars_list):
+        self.max_wait = 0
+        sum_waits = 0
+        for car in waiting_cars_list:
+            sum_waits += car.time_waited
+            if car.time_waited > self.max_wait:
+                self.max_wait = car.time_waited
+        if len(waiting_cars_list) == 0:
+            self.avg_wait = 0
+        else:
+            self.avg_wait = sum_waits / len(waiting_cars_list)
+        self.num_cars_waiting = len(waiting_cars_list)
+        
+
     def randomize(self):
         self.num_cars_waiting = random.randint(0, 10)
         if self.num_cars_waiting == 0:
