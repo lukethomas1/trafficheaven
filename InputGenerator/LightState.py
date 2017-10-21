@@ -1,5 +1,5 @@
 from enum import Enum
-from Direction import Direction
+from .Direction import Direction
 
 class LightState(Enum):
     North = [Direction.N_left, Direction.N_straight, Direction.N_right]

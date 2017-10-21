@@ -1,7 +1,7 @@
 import operator
-from DataInput import DataInput
-from Direction import Direction
-from LightState import LightState
+from .Direction import Direction
+from .DataInput import DataInput
+from .LightState import LightState
 
 class StopLight:
     def __init__(self):

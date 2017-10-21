@@ -1,5 +1,5 @@
 import random
-from Direction import Direction
+from .Direction import Direction
 
 class DataInput:
     def __init__(self, this_direction):
